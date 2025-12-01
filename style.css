@@ -1,0 +1,165 @@
+/* Definisi Warna */
+:root {
+    --primary-color: #007bff; /* Biru terang utama */
+    --secondary-color: #6c757d; /* Abu-abu sekunder */
+    --light-bg: #f8f9fa; /* Latar belakang sangat terang */
+    --dark-text: #212529; /* Warna teks gelap */
+    --border-color: #dee2e6;
+}
+
+/* ---------------------------------------------------- */
+/* Global Styling & Body */
+/* ---------------------------------------------------- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+/* Heading */
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+/* ---------------------------------------------------- */
+/* Navigasi (Header) */
+/* ---------------------------------------------------- */
+nav {
+    background-color: var(--primary-color);
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin-right: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background-color: #0056b3; /* Biru sedikit lebih gelap saat hover */
+}
+
+/* ---------------------------------------------------- */
+/* Konten Utama */
+/* ---------------------------------------------------- */
+.content {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    min-height: 80vh;
+    border-radius: 8px; /* Sudut membulat */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Link Aksi (Tambah, Edit, Delete) */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Tombol Aksi */
+a.action-button, button[type="submit"] {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+a.action-button:hover, button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* ---------------------------------------------------- */
+/* Tabel Data */
+/* ---------------------------------------------------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+table thead th {
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    font-weight: 600;
+    border-top: 2px solid var(--primary-color);
+}
+
+/* Garis zebra */
+table tbody tr:nth-child(even) {
+    background-color: #f0f8ff; /* Biru sangat muda */
+}
+
+/* ---------------------------------------------------- */
+/* Formulir */
+/* ---------------------------------------------------- */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+form input[type="text"], 
+form input[type="number"],
+form input[type="password"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+form input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Styling Khusus untuk Form Login (Jika masih menggunakan style bawaan di login.php) */
+.login-container {
+    width: 350px;
+    margin: 100px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--primary-color);
+}
